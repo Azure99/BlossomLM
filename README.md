@@ -1,0 +1,2 @@
+# BlossomLM
+BlossomLM是一系列面向实用场景的对话式大型语言模型
