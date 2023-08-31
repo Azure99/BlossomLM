@@ -17,8 +17,8 @@ BlossomLM是一系列面向实用场景的对话式大型语言模型
 
 ## 数据集
 
-| 数据集          | 类型         | 数据量 |
-| --------------- | ------------ | ------ |
-| blossom-chat-v1 | 多轮通用对话 | 30K    |
-| blossom-math-v1 | 数学题       | 10K    |
+| 数据集                                                       | 类型         | 数据量 |
+| ------------------------------------------------------------ | ------------ | ------ |
+| [blossom-chat-v1](https://huggingface.co/datasets/Azure99/blossom-chat-v1) | 多轮通用对话 | 30K    |
+| [blossom-math-v1](https://huggingface.co/datasets/Azure99/blossom-math-v1) | 数学题       | 10K    |
 
