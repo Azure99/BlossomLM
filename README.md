@@ -15,7 +15,7 @@ BlossomLM是一系列面向实用场景的对话式大型语言模型
 | 模型                                                         | 参数量 | 预训练模型                     |
 | ------------------------------------------------------------ | ------ | ------------------------------ |
 | [blossom-v2-baichuan-13b](https://huggingface.co/Azure99/blossom-v2-baichuan-13b)👍 | 130亿  | baichuan-inc/Baichuan-13B-Base |
-| [blossom-v2-baichuan-7b](https://huggingface.co/Azure99/blossom-v2-baichuan-7b)👍 | 70亿   | baichuan-inc/Baichuan-7B       |
+| [blossom-v3-baichuan2-7b](https://huggingface.co/Azure99/blossom-v3-baichuan2-7b)👍 | 70亿   | baichuan-inc/Baichuan2-7B-Base |
 | [blossom-v2-llama2-7b](https://huggingface.co/Azure99/blossom-v2-llama2-7b) | 70亿   | meta-llama/Llama-2-7b-hf       |
 | [blossom-v2-3b](https://huggingface.co/Azure99/blossom-v2-3b) | 30亿   | bigscience/bloom-3b            |
 
