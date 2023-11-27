@@ -8,7 +8,7 @@ BlossomLM是一系列面向实用场景的对话式大型语言模型
 
 [BlossomChat🚀](https://chat.rainng.com/)
 
-Demo模型为blossom-v3-baichuan2-7b
+Demo模型为blossom-v3_1-baichuan2-7b
 
 ## 模型权重
 
