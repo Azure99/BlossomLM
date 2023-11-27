@@ -14,9 +14,9 @@ Demo模型为blossom-v3-baichuan2-7b
 
 | 模型                                                         | 参数量 | 预训练模型                     |
 | ------------------------------------------------------------ | ------ | ------------------------------ |
-| [blossom-v2-baichuan-13b](https://huggingface.co/Azure99/blossom-v2-baichuan-13b)👍 | 130亿  | baichuan-inc/Baichuan-13B-Base |
-| [blossom-v3-baichuan2-7b](https://huggingface.co/Azure99/blossom-v3-baichuan2-7b)👍 | 70亿   | baichuan-inc/Baichuan2-7B-Base |
-| [blossom-v3-mistral-7b](https://huggingface.co/Azure99/blossom-v3-mistral-7b) | 70亿   | mistralai/Mistral-7B-v0.1       |
+| [blossom-v3_1-baichuan2-13b](https://huggingface.co/Azure99/blossom-v3_1-baichuan2-13b)👍 | 130亿  | baichuan-inc/Baichuan2-13B-Base |
+| [blossom-v3_1-baichuan2-7b](https://huggingface.co/Azure99/blossom-v3_1-baichuan2-7b)👍 | 70亿   | baichuan-inc/Baichuan2-7B-Base |
+| [blossom-v3_1-mistral-7b](https://huggingface.co/Azure99/blossom-v3_1-mistral-7b) | 70亿   | mistralai/Mistral-7B-v0.1       |
 | [blossom-v2-3b](https://huggingface.co/Azure99/blossom-v2-3b) | 30亿   | bigscience/bloom-3b            |
 
 ## 数据集
