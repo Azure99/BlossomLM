@@ -25,6 +25,6 @@ Demo模型为blossom-v3_1-yi-34b，出于成本限制，使用了4bit量化部�
 | 数据集                                                       | 类型                   | 数据量 |
 | ------------------------------------------------------------ | ---------------------- | ------ |
 | [blossom-chat-v1](https://huggingface.co/datasets/Azure99/blossom-chat-v1) | 多轮通用对话           | 30K    |
-| [blossom-math-v2](https://huggingface.co/datasets/Azure99/blossom-math-v2) | 数学题COT              | 10K    |
-| [blossom-orca-v1](https://huggingface.co/datasets/Azure99/blossom-orca-v1) | 带有System的解释性指令 | 200K   |
-| [blossom-wizard-v1](https://huggingface.co/datasets/Azure99/blossom-wizard-v1) | 更复杂的单轮指令       | 100K   |
+| [blossom-math-v3](https://huggingface.co/datasets/Azure99/blossom-math-v3) | 数学题COT              | 10K    |
+| [blossom-orca-v2](https://huggingface.co/datasets/Azure99/blossom-orca-v2) | 带有System的解释性指令 | 200K   |
+| [blossom-wizard-v2](https://huggingface.co/datasets/Azure99/blossom-wizard-v2) | 更复杂的单轮指令       | 100K   |
