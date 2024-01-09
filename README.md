@@ -1,6 +1,8 @@
 # BlossomLM
 
-BlossomLM是一系列面向实用场景的对话式大型语言模型
+Blossom是一系列开源的对话式大型语言模型
+
+本项目旨在提供一套高质量的中英双语通用SFT数据，让微调变得触手可及，同时提供训练后的模型权重
 
 更多信息待补充
 
@@ -8,7 +10,7 @@ BlossomLM是一系列面向实用场景的对话式大型语言模型
 
 [BlossomChat🚀](https://blossom-chat.com/)
 
-Demo模型为blossom-v4-yi-34b，出于成本限制，使用了4bit量化部署，效果会略有下降
+Demo模型为blossom-v4-yi-34b，出于资源限制，使用了4bit量化部署，效果会有一定下降
 
 ## 模型权重
 
@@ -24,6 +26,6 @@ Demo模型为blossom-v4-yi-34b，出于成本限制，使用了4bit量化部署�
 | 数据集                                                       | 类型                   | 数据量 |
 | ------------------------------------------------------------ | ---------------------- | ------ |
 | [blossom-chat-v2](https://huggingface.co/datasets/Azure99/blossom-chat-v2) | 多轮通用对话           | 30K    |
-| [blossom-math-v3](https://huggingface.co/datasets/Azure99/blossom-math-v3) | 数学题COT              | 10K    |
-| [blossom-orca-v2](https://huggingface.co/datasets/Azure99/blossom-orca-v2) | 带有System的解释性指令 | 200K   |
-| [blossom-wizard-v2](https://huggingface.co/datasets/Azure99/blossom-wizard-v2) | 更复杂的单轮指令       | 100K   |
+| [blossom-math-v3](https://huggingface.co/datasets/Azure99/blossom-math-v3) | 包含推理过程的数学题目 | 10K    |
+| [blossom-orca-v2](https://huggingface.co/datasets/Azure99/blossom-orca-v2) | 解释型指令             | 200K   |
+| [blossom-wizard-v2](https://huggingface.co/datasets/Azure99/blossom-wizard-v2) | 更复杂的指令           | 100K   |
