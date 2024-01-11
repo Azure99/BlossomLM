@@ -20,6 +20,7 @@ Demo模型为blossom-v4-yi-34b，出于资源限制，使用了4bit量化部署�
 | [blossom-v4-qwen-14b](https://huggingface.co/Azure99/blossom-v4-qwen-14b) | 140亿  | Qwen/Qwen-14B                  |
 | [blossom-v4-baichuan2-7b](https://huggingface.co/Azure99/blossom-v4-baichuan2-7b) | 70亿   | baichuan-inc/Baichuan2-7B-Base |
 | [blossom-v4-mistral-7b](https://huggingface.co/Azure99/blossom-v4-mistral-7b) | 70亿   | mistralai/Mistral-7B-v0.1      |
+| [blossom-v4-qwen-1_8b](https://huggingface.co/Azure99/blossom-v4-qwen-1_8b) | 18亿  | Qwen/Qwen-1_8B                  |
 
 ## 数据集
 
