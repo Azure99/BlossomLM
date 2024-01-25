@@ -16,11 +16,11 @@ Demo模型为blossom-v4-yi-34b，出于资源限制，使用了4bit量化部署�
 
 | 模型                      | 参数量  | 预训练模型                          |
 |-------------------------|------|--------------------------------|
-| [__blossom-v4-yi-34b__](https://huggingface.co/Azure99/blossom-v4-yi-34b)       | 340亿 | 01-ai/Yi-34B                   |
-| [__blossom-v4-qwen-14b__](https://huggingface.co/Azure99/blossom-v4-qwen-14b)     | 140亿 | Qwen/Qwen-14B                  |
-| [__blossom-v4-baichuan2-7b__](https://huggingface.co/Azure99/blossom-v4-baichuan2-7b) | 70亿  | baichuan-inc/Baichuan2-7B-Base |
-| [__blossom-v4-mistral-7b__](https://huggingface.co/Azure99/blossom-v4-mistral-7b)   | 70亿  | mistralai/Mistral-7B-v0.1      |
-| [__blossom-v4-qwen-1_8b__](https://huggingface.co/Azure99/blossom-v4-qwen-1_8b)    | 18亿  | Qwen/Qwen-1_8B                 |
+| [blossom-v4-yi-34b](https://huggingface.co/Azure99/blossom-v4-yi-34b)       | 340亿 | 01-ai/Yi-34B                   |
+| [blossom-v4-qwen-14b](https://huggingface.co/Azure99/blossom-v4-qwen-14b)     | 140亿 | Qwen/Qwen-14B                  |
+| [blossom-v4-baichuan2-7b](https://huggingface.co/Azure99/blossom-v4-baichuan2-7b) | 70亿  | baichuan-inc/Baichuan2-7B-Base |
+| [blossom-v4-mistral-7b](https://huggingface.co/Azure99/blossom-v4-mistral-7b)   | 70亿  | mistralai/Mistral-7B-v0.1      |
+| [blossom-v4-qwen-1_8b](https://huggingface.co/Azure99/blossom-v4-qwen-1_8b)    | 18亿  | Qwen/Qwen-1_8B                 |
 
 ## 数据集
 
