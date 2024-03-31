@@ -1,0 +1,13 @@
+FROM model.gguf
+
+PARAMETER temperature 0.5
+PARAMETER top_p 0.85
+PARAMETER repeat_penalty 1.05
+PARAMETER top_k 50
+
+SYSTEM """A chat between a human and an artificial intelligence bot. The bot gives helpful, detailed, and polite answers to the human's questions."""
+
+TEMPLATE """{{ if .System }}{{ .System }}
+{{ end }}|Human|: {{ .Prompt }}
+|Bot|: {{ .Response }}<|endoftext|>
+"""
