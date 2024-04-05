@@ -26,7 +26,7 @@ Demo模型为blossom-v5-34b，出于资源限制，使用了4bit量化部署，�
 
 ### Ollama
 
-安装[Ollama](https://ollama.com/)后即可一键启动，你可以在[模型列表](https://ollama.com/azure99/blossom-v5)查看全部可用模型。
+安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v5)查看全部可用模型(4b~34b)。
 
 > ollama run azure99/blossom-v5
 
