@@ -14,13 +14,14 @@ Demo模型为blossom-v5-34b，出于资源限制，使用了4bit量化部署，�
 
 ## 模型权重
 
-| 模型                                                         | 参数量 | 预训练模型                |
-| ------------------------------------------------------------ | ------ | ------------------------- |
-| [blossom-v5-34b](https://huggingface.co/Azure99/blossom-v5-34b) [GGUF](https://huggingface.co/Azure99/blossom-v5-34b-gguf/tree/main) [🌼演示](https://blossom-chat.com/) | 340亿  | 01-ai/Yi-34B              |
-| [blossom-v5-14b](https://huggingface.co/Azure99/blossom-v5-14b) [GGUF](https://huggingface.co/Azure99/blossom-v5-14b-gguf/tree/main) [🤗演示](https://azure99-blossom-14b-demo.hf.space/) | 140亿  | Qwen/Qwen1.5-14B          |
-| [blossom-v5-9b](https://huggingface.co/Azure99/blossom-v5-9b) [GGUF](https://huggingface.co/Azure99/blossom-v5-9b-gguf/tree/main) [🤗演示](https://azure99-blossom-9b-demo.hf.space/) | 90亿   | 01-ai/Yi-9B               |
-| [blossom-v5-4b](https://huggingface.co/Azure99/blossom-v5-4b) [GGUF](https://huggingface.co/Azure99/blossom-v5-4b-gguf/tree/main) [🤗演示](https://azure99-blossom-4b-demo.hf.space/) | 40亿   | Qwen/Qwen1.5-4B           |
-| [blossom-v5-mistral-7b](https://huggingface.co/Azure99/blossom-v5-mistral-7b) [GGUF](https://huggingface.co/Azure99/blossom-v5-mistral-7b-gguf/tree/main) [🤗演示](https://azure99-blossom-mistral-7b-demo.hf.space/) | 70亿   | mistralai/Mistral-7B-v0.1 |
+| 模型                                                         | 参数量 | 预训练模型                 |
+| ------------------------------------------------------------ | ------ | -------------------------- |
+| [blossom-v5-34b](https://huggingface.co/Azure99/blossom-v5-34b) [GGUF](https://huggingface.co/Azure99/blossom-v5-34b-gguf/tree/main) [🌼演示](https://blossom-chat.com/) | 340亿  | 01-ai/Yi-34B               |
+| [blossom-v5-14b](https://huggingface.co/Azure99/blossom-v5-14b) [GGUF](https://huggingface.co/Azure99/blossom-v5-14b-gguf/tree/main) [🤗演示](https://azure99-blossom-14b-demo.hf.space/) | 140亿  | Qwen/Qwen1.5-14B           |
+| [blossom-v5-9b](https://huggingface.co/Azure99/blossom-v5-9b) [GGUF](https://huggingface.co/Azure99/blossom-v5-9b-gguf/tree/main) [🤗演示](https://azure99-blossom-9b-demo.hf.space/) | 90亿   | 01-ai/Yi-9B                |
+| [blossom-v5-4b](https://huggingface.co/Azure99/blossom-v5-4b) [GGUF](https://huggingface.co/Azure99/blossom-v5-4b-gguf/tree/main) [🤗演示](https://azure99-blossom-4b-demo.hf.space/) | 40亿   | Qwen/Qwen1.5-4B            |
+| [blossom-v5-mistral-7b](https://huggingface.co/Azure99/blossom-v5-mistral-7b) [GGUF](https://huggingface.co/Azure99/blossom-v5-mistral-7b-gguf/tree/main) [🤗演示](https://azure99-blossom-mistral-7b-demo.hf.space/) | 70亿   | mistralai/Mistral-7B-v0.1  |
+| [blossom-v5-llama3-8b](https://huggingface.co/Azure99/blossom-v5-llama3-8b) [GGUF](https://huggingface.co/Azure99/blossom-v5-llama3-8b-gguf) [🤗演示](https://azure99-blossom-llama3-8b-demo.hf.space/) | 80亿   | meta-llama/Meta-Llama-3-8B |
 
 ## 模型部署
 
