@@ -1,16 +1,20 @@
 # BlossomLM
 
+<p align="center">
+    <img src="https://www.rainng.com/wp-content/uploads/2024/04/logo-blossom.jpg" width="200"/>
+<p>
+
+<p align="center">
+    📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>&nbsp|&nbsp🖥️<a
+        href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
+        href="https://huggingface.co/Azure99">Hugging Face</a>
+</p>
+
 Blossom是一系列开源的对话式大型语言模型。
 
 本项目旨在提供一套高质量的中英双语通用SFT数据，让微调变得触手可及，同时提供训练后的模型权重。
 
 **Hint**: BlossomLM是个人非商业化项目。
-
-## 在线体验
-
-[BlossomChat🚀](https://blossom-chat.com/)
-
-Demo模型为blossom-v5-34b，出于资源限制，使用了4bit量化部署，效果会有一定下降。
 
 ## 模型权重
 
@@ -34,6 +38,18 @@ Demo模型为blossom-v5-34b，出于资源限制，使用了4bit量化部署，�
 如果希望将模型权重完全放置到GPU上，可以使用带有**gpu**后缀的tag。
 
 > ollama run azure99/blossom-v5:gpu
+
+#### Android编译Ollama
+
+首先需要安装[Termux](https://termux.dev/en/)，然后执行下面的脚本，它会自动编译Ollama并启动服务，每次重启后，需要重新执行脚本。
+
+```bash
+curl -s https://raw.githubusercontent.com/Azure99/BlossomLM/main/inference/ollama/termux.sh | bash
+```
+
+执行完毕后，使用ollama启动。对于中文场景，你可能需要添加`--nowordwrap`来避免换行异常。
+
+> ollama run azure99/blossom-v5 --nowordwrap
 
 ### Transformers
 
