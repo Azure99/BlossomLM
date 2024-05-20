@@ -4,11 +4,13 @@
     <img src="https://www.rainng.com/wp-content/uploads/2024/04/logo-blossom.jpg" width="200"/>
 <p>
 
+
 <p align="center">
     📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>&nbsp|&nbsp🖥️<a
         href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
         href="https://huggingface.co/Azure99">Hugging Face</a>
 </p>
+
 
 Blossom是一系列开源的对话式大型语言模型。
 
@@ -18,14 +20,11 @@ Blossom是一系列开源的对话式大型语言模型。
 
 ## 模型权重
 
-| 模型                                                         | 参数量 | 预训练模型                 |
-| ------------------------------------------------------------ | ------ | -------------------------- |
-| [blossom-v5-34b](https://huggingface.co/Azure99/blossom-v5-34b) [GGUF](https://huggingface.co/Azure99/blossom-v5-34b-gguf/tree/main) [🌼演示](https://blossom-chat.com/) | 340亿  | 01-ai/Yi-34B               |
-| [blossom-v5-32b](https://huggingface.co/Azure99/blossom-v5-32b) [GGUF](https://huggingface.co/Azure99/blossom-v5-32b-gguf/tree/main) [🌼演示](https://blossom-chat.com/) | 320亿  | Qwen/Qwen1.5-32B           |
-| [blossom-v5-14b](https://huggingface.co/Azure99/blossom-v5-14b) [GGUF](https://huggingface.co/Azure99/blossom-v5-14b-gguf/tree/main) [🤗演示](https://azure99-blossom-14b-demo.hf.space/) | 140亿  | Qwen/Qwen1.5-14B           |
-| [blossom-v5-9b](https://huggingface.co/Azure99/blossom-v5-9b) [GGUF](https://huggingface.co/Azure99/blossom-v5-9b-gguf/tree/main) [🤗演示](https://azure99-blossom-9b-demo.hf.space/) | 90亿   | 01-ai/Yi-9B                |
-| [blossom-v5-4b](https://huggingface.co/Azure99/blossom-v5-4b) [GGUF](https://huggingface.co/Azure99/blossom-v5-4b-gguf/tree/main) [🤗演示](https://azure99-blossom-4b-demo.hf.space/) | 40亿   | Qwen/Qwen1.5-4B            |
-| [blossom-v5-llama3-8b](https://huggingface.co/Azure99/blossom-v5-llama3-8b) [GGUF](https://huggingface.co/Azure99/blossom-v5-llama3-8b-gguf) [🤗演示](https://azure99-blossom-llama3-8b-demo.hf.space/) | 80亿   | meta-llama/Meta-Llama-3-8B |
+| 模型                                                         | 参数量 | 预训练模型       |
+| ------------------------------------------------------------ | ------ | ---------------- |
+| [blossom-v5.1-34b](https://huggingface.co/Azure99/blossom-v5.1-34b) [GGUF](https://huggingface.co/Azure99/blossom-v5.1-34b-gguf/tree/main) [🌼演示](https://blossom-chat.com/) | 340亿  | 01-ai/Yi-1.5-34B |
+| [blossom-v5.1-9b](https://huggingface.co/Azure99/blossom-v5.1-9b) [GGUF](https://huggingface.co/Azure99/blossom-v5.1-9b-gguf/tree/main) [🤗演示](https://azure99-blossom-9b-demo.hf.space/) | 90亿   | 01-ai/Yi-1.5-9B  |
+| [blossom-v5.1-4b](https://huggingface.co/Azure99/blossom-v5-4b) [GGUF](https://huggingface.co/Azure99/blossom-v5-4b-gguf/tree/main) [🤗演示](https://azure99-blossom-4b-demo.hf.space/) | 40亿   | Qwen/Qwen1.5-4B  |
 
 ## 模型部署
 
@@ -83,10 +82,9 @@ python web_demo.py
 
 | 模型                      | 专业 | 中文 | 任务 | 数学 | 写作 | 问答 | 扮演 | 逻辑 | 推理 | 语言 | 总分 |
 | ------------------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| **blossom-v5.1-34b**      | 8.07 | 7.79 | 7.69 | 6.47 | 7.76 | 8.71 | 7.86 | 6.00 | 6.23 | 7.98 | 7.10 |
 | gpt-4-0613                | 7.56 | 6.76 | 7.16 | 6.49 | 7.31 | 7.26 | 7.48 | 6.33 | 6.41 | 7.25 | 6.83 |
-| **blossom-v5-34b**        | 8.35 | 7.20 | 7.02 | 5.47 | 7.85 | 8.44 | 7.76 | 6.09 | 5.78 | 7.77 | 6.78 |
-| **blossom-v5-14b**        | 7.70 | 6.98 | 6.88 | 5.42 | 7.46 | 8.34 | 7.43 | 5.83 | 5.63 | 7.47 | 6.55 |
-| **blossom-v5-9b**         | 7.41 | 7.06 | 7.08 | 4.93 | 7.56 | 8.78 | 7.56 | 5.42 | 5.18 | 7.57 | 6.38 |
+| **blossom-v5.1-9b**       | 8.16 | 7.13 | 7.39 | 5.08 | 7.56 | 8.55 | 7.86 | 6.03 | 5.55 | 7.77 | 6.66 |
 | yi-34b-chat-0205          | 7.63 | 7.55 | 6.95 | 4.40 | 7.66 | 7.94 | 7.43 | 5.76 | 5.08 | 7.53 | 6.30 |
 | gpt-3.5-turbo-0613        | 6.29 | 5.60 | 6.01 | 4.90 | 7.27 | 6.97 | 6.98 | 4.79 | 4.85 | 6.52 | 5.68 |
 | spark_desk_v2（讯飞星火） | 5.96 | 6.29 | 5.76 | 4.53 | 7.25 | 6.37 | 7.03 | 4.62 | 4.58 | 6.44 | 5.51 |
@@ -96,15 +94,14 @@ python web_demo.py
 
 ### MTBench
 
-| 模型                      | 第一轮 | 第二轮 | 总分 |
-| ------------------------- | ------ | ------ | ---- |
-| gpt-4                     | 8.96   | 9.02   | 8.99 |
-| **blossom-v5-14b**        | 8.73   | 7.61   | 8.17 |
-| **blossom-v5-34b**        | 8.38   | 7.66   | 8.02 |
-| gpt-3.5-turbo             | 8.08   | 7.81   | 7.94 |
-| **blossom-v5-9b**         | 8.26   | 7.33   | 7.80 |
-| **blossom-v5-mistral-7b** | 7.81   | 7.40   | 7.60 |
-| zephyr-7b-beta            | -      | -      | 7.34 |
-| vicuna-33b-v1.3           | 7.46   | 6.78   | 7.12 |
-| qwen-14b-chat             | -      | -      | 6.96 |
-| Mistral-7B-Instruct-v0.1  | -      | -      | 6.84 |
+| 模型                     | 第一轮 | 第二轮 | 总分 |
+| ------------------------ | ------ | ------ | ---- |
+| gpt-4                    | 8.96   | 9.02   | 8.99 |
+| **blossom-v5-14b**       | 8.73   | 7.61   | 8.17 |
+| **blossom-v5-34b**       | 8.38   | 7.66   | 8.02 |
+| gpt-3.5-turbo            | 8.08   | 7.81   | 7.94 |
+| **blossom-v5-9b**        | 8.26   | 7.33   | 7.80 |
+| zephyr-7b-beta           | -      | -      | 7.34 |
+| vicuna-33b-v1.3          | 7.46   | 6.78   | 7.12 |
+| qwen-14b-chat            | -      | -      | 6.96 |
+| Mistral-7B-Instruct-v0.1 | -      | -      | 6.84 |
