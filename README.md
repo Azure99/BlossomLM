@@ -36,10 +36,6 @@ Blossom是一系列开源的对话式大型语言模型。
 
 > ollama run azure99/blossom
 
-如果希望将模型权重完全放置到GPU上，可以使用带有**gpu**后缀的tag。
-
-> ollama run azure99/blossom:gpu
-
 #### Android编译Ollama
 
 首先需要安装[Termux](https://termux.dev/en/)，然后执行下面的脚本，它会自动编译Ollama并启动服务，每次重启后，需要重新执行脚本。
