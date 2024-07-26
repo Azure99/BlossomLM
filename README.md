@@ -26,7 +26,7 @@ Blossom是一系列开源的对话式大型语言模型。
 | ------------------------------------------------------------ | ------ | ---------------- |
 | [blossom-v5.1-34b](https://huggingface.co/Azure99/blossom-v5.1-34b) [GGUF](https://huggingface.co/Azure99/blossom-v5.1-34b-gguf/tree/main) [🤗演示](https://azure99-blossom-34b-demo.hf.space/) | 340亿  | 01-ai/Yi-1.5-34B |
 | [blossom-v5.1-9b](https://huggingface.co/Azure99/blossom-v5.1-9b) [GGUF](https://huggingface.co/Azure99/blossom-v5.1-9b-gguf/tree/main) [🤗演示](https://azure99-blossom-9b-demo.hf.space/) | 90亿   | 01-ai/Yi-1.5-9B  |
-| [blossom-v5.1-4b](https://huggingface.co/Azure99/blossom-v5-4b) [GGUF](https://huggingface.co/Azure99/blossom-v5-4b-gguf/tree/main) [🤗演示](https://azure99-blossom-4b-demo.hf.space/) | 40亿   | Qwen/Qwen1.5-4B  |
+| [blossom-v5.1-4b](https://huggingface.co/Azure99/blossom-v5-4b) [GGUF](https://huggingface.co/Azure99/blossom-v5-4b-gguf/tree/main) | 40亿   | Qwen/Qwen1.5-4B  |
 
 ## 模型部署
 
