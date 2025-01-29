@@ -6,7 +6,6 @@
 
 
 
-
 <p align="center">
     📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>&nbsp|&nbsp🖥️<a
         href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
@@ -15,22 +14,17 @@
 
 
 
-
-Blossom是一系列开源的对话式大型语言模型。
-
-本项目旨在提供一套高质量的中英双语通用SFT数据，让微调变得触手可及，同时提供训练后的模型权重。
+Blossom是一个开源的对话式大型语言模型，提供可复现的后训练数据，致力于为每个人提供开放、强大且高效的本地通用模型。
 
 **Hint**: BlossomLM是个人非商业化项目。
 
-- 2024.12.07: 很高兴推出Blossom V6预览版（可前往[https://blossom-chat.com/](https://blossom-chat.com/)体验），当最终版本训练完成后，会一并开源模型权重和训练数据。
-
 ## 模型权重
 
-| 模型                                                         | 参数量 | 预训练模型       |
-| ------------------------------------------------------------ | ------ | ---------------- |
-| [blossom-v5.1-34b](https://huggingface.co/Azure99/blossom-v5.1-34b) [GGUF](https://huggingface.co/Azure99/blossom-v5.1-34b-gguf/tree/main) [🤗演示](https://azure99-blossom-34b-demo.hf.space/) | 340亿  | 01-ai/Yi-1.5-34B |
-| [blossom-v5.1-9b](https://huggingface.co/Azure99/blossom-v5.1-9b) [GGUF](https://huggingface.co/Azure99/blossom-v5.1-9b-gguf/tree/main) [🤗演示](https://azure99-blossom-9b-demo.hf.space/) | 90亿   | 01-ai/Yi-1.5-9B  |
-| [blossom-v5.1-4b](https://huggingface.co/Azure99/blossom-v5-4b) [GGUF](https://huggingface.co/Azure99/blossom-v5-4b-gguf/tree/main) | 40亿   | Qwen/Qwen1.5-4B  |
+|                             模型                             |                           相关资源                           | 预训练模型  |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :---------: |
+| [Blossom-V6-32B](https://huggingface.co/Azure99/Blossom-V6-32B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6-32B-AWQ-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6-32B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6-32B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6:32b) | Qwen2.5-32B |
+| [Blossom-V6-14B](https://huggingface.co/Azure99/Blossom-V6-14B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6-14B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6-14B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6-14B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6:14b) | Qwen2.5-14B |
+| [Blossom-V6-7B](https://huggingface.co/Azure99/Blossom-V6-7B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6-7B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6-7B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6-7B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6:7b) | Qwen2.5-7B  |
 
 ## 模型部署
 
@@ -38,7 +32,7 @@ Blossom是一系列开源的对话式大型语言模型。
 
 安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v5)查看全部可用模型(4b~34b)。
 
-> ollama run azure99/blossom
+> ollama run azure99/blossom-v6
 
 #### Android编译Ollama
 
@@ -48,9 +42,9 @@ Blossom是一系列开源的对话式大型语言模型。
 curl -s https://raw.githubusercontent.com/Azure99/BlossomLM/main/inference/ollama/termux.sh | bash
 ```
 
-执行完毕后，使用ollama启动。对于中文场景，你可能需要添加`--nowordwrap`来避免换行异常。
+执行完毕后，使用ollama启动。
 
-> ollama run azure99/blossom --nowordwrap
+> ollama run azure99/blossom-v6
 
 ### Transformers
 
@@ -69,12 +63,10 @@ python web_demo.py
 
 ## 数据集
 
-| 数据集                                                       | 类型                   | 数据量 |
-| ------------------------------------------------------------ | ---------------------- | ------ |
-| [blossom-chat-v3](https://huggingface.co/datasets/Azure99/blossom-chat-v3) | 多轮通用对话           | 5K     |
-| [blossom-math-v4](https://huggingface.co/datasets/Azure99/blossom-math-v4) | 包含推理过程的数学题目 | 10K    |
-| [blossom-orca-v3](https://huggingface.co/datasets/Azure99/blossom-orca-v3) | 解释型指令             | 40K    |
-| [blossom-wizard-v3](https://huggingface.co/datasets/Azure99/blossom-wizard-v3) | 更复杂的指令           | 20K    |
+| 数据集                                                       | 数据量 |
+| ------------------------------------------------------------ | ------ |
+| [blossom-v6-sft-stage1](https://huggingface.co/datasets/Azure99/blossom-v6-sft-stage1) | 150K   |
+| [blossom-v6-sft-stage2](https://huggingface.co/datasets/Azure99/blossom-v6-sft-stage2) | 50K    |
 
 ## 模型评测
 
