@@ -4,11 +4,13 @@
     <img src="https://www.rainng.com/wp-content/uploads/2024/04/logo-blossom.jpg" width="200"/>
 <p>
 
+
 <p align="center">
     📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>&nbsp|&nbsp🖥️<a
         href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
         href="https://huggingface.co/Azure99">Hugging Face</a>
 </p>
+
 
 Blossom是一个开源的对话式大型语言模型，提供可复现的后训练数据，致力于为每个人提供开放、强大且高效的本地通用模型。
 
@@ -23,11 +25,13 @@ Blossom是一个开源的对话式大型语言模型，提供可复现的后训�
 | [Blossom-V6.1-14B](https://huggingface.co/Azure99/Blossom-V6.1-14B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.1-14B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6.1-14B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6.1-14B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.1:14b) |   Qwen3-14B-Base    |
 | [Blossom-V6.1-8B](https://huggingface.co/Azure99/Blossom-V6.1-8B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.1-8B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6.1-8B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6.1-8B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.1:7b) |    Qwen3-8B-Base    |
 
+注：Blossom-V6.1-GLM-32B在日常任务上效果比Blossom-V6.1-32B更优。
+
 ## 模型部署
 
 ### Ollama
 
-安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v5)查看全部可用模型(4b~34b)。
+安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v6.1)查看全部可用模型(8b~32b)。
 
 > ollama run azure99/blossom-v6.1
 
