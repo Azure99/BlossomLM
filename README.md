@@ -4,15 +4,15 @@
     <img src="https://www.rainng.com/wp-content/uploads/2024/04/logo-blossom.jpg" width="200"/>
 <p>
 
-
 <p align="center">
-    📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>&nbsp|&nbsp🖥️<a
+    🖥️<a
         href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
-        href="https://huggingface.co/Azure99">Hugging Face</a>
+        href="https://huggingface.co/Azure99">Hugging Face</a>&nbsp|&nbsp📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>
 </p>
 
-
 Blossom是一个开源的对话式大型语言模型，提供可复现的后训练数据，致力于为每个人提供开放、强大且高效的本地通用模型。
+
+Blossom模型的所有训练数据均由[BlossomData](https://github.com/Azure99/BlossomData)处理及合成，这是一个专为大模型设计的灵活且高效的数据处理框架。
 
 **Hint**: BlossomLM是个人非商业化项目。
 
