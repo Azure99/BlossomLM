@@ -6,11 +6,13 @@
 
 
 
+
 <p align="center">
     📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>&nbsp|&nbsp🖥️<a
         href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
         href="https://huggingface.co/Azure99">Hugging Face</a>
 </p>
+
 
 
 
@@ -20,11 +22,12 @@ Blossom是一个开源的对话式大型语言模型，提供可复现的后训�
 
 ## 模型权重
 
-|                             模型                             |                           相关资源                           | 预训练模型  |
-| :----------------------------------------------------------: | :----------------------------------------------------------: | :---------: |
-| [Blossom-V6-32B](https://huggingface.co/Azure99/Blossom-V6-32B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6-32B-AWQ-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6-32B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6-32B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6:32b) | Qwen2.5-32B |
-| [Blossom-V6-14B](https://huggingface.co/Azure99/Blossom-V6-14B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6-14B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6-14B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6-14B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6:14b) | Qwen2.5-14B |
-| [Blossom-V6-7B](https://huggingface.co/Azure99/Blossom-V6-7B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6-7B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6-7B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6-7B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6:7b) | Qwen2.5-7B  |
+|                             模型                             |                           相关资源                           |     预训练模型      |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :-----------------: |
+| [Blossom-V6.1-32B](https://huggingface.co/Azure99/Blossom-V6.1-32B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.1-32B-AWQ-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6.1-32B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6.1-32B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.1:32b) |     Qwen2.5-32B     |
+| [Blossom-V6.1-GLM-32B](https://huggingface.co/Azure99/Blossom-V6.1-GLM-32B) | [GGUF](https://huggingface.co/Azure99/Blossom-V6.1-GLM-32B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.1:glm-32b) | GLM-4-32B-Base-0414 |
+| [Blossom-V6.1-14B](https://huggingface.co/Azure99/Blossom-V6.1-14B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.1-14B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6.1-14B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6.1-14B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.1:14b) |   Qwen3-14B-Base    |
+| [Blossom-V6.1-8B](https://huggingface.co/Azure99/Blossom-V6.1-8B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.1-8B-Demo) [AWQ](https://huggingface.co/Azure99/Blossom-V6.1-8B-AWQ) [GGUF](https://huggingface.co/Azure99/Blossom-V6.1-8B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.1:7b) |    Qwen3-8B-Base    |
 
 ## 模型部署
 
@@ -32,7 +35,7 @@ Blossom是一个开源的对话式大型语言模型，提供可复现的后训�
 
 安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v5)查看全部可用模型(4b~34b)。
 
-> ollama run azure99/blossom-v6
+> ollama run azure99/blossom-v6.1
 
 #### Android编译Ollama
 
@@ -44,7 +47,7 @@ curl -s https://raw.githubusercontent.com/Azure99/BlossomLM/main/inference/ollam
 
 执行完毕后，使用ollama启动。
 
-> ollama run azure99/blossom-v6
+> ollama run azure99/blossom-v6.1
 
 ### Transformers
 
