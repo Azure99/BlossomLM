@@ -68,8 +68,8 @@ python web_demo.py
 
 | 数据集                                                       | 数据量 |
 | ------------------------------------------------------------ | ------ |
-| [blossom-v6-sft-stage1](https://huggingface.co/datasets/Azure99/blossom-v6-sft-stage1) | 150K   |
-| [blossom-v6-sft-stage2](https://huggingface.co/datasets/Azure99/blossom-v6-sft-stage2) | 50K    |
+| [blossom-v6.1-sft-stage1](https://huggingface.co/datasets/Azure99/blossom-v6.1-sft-stage1) | 150K   |
+| [blossom-v6.1-sft-stage2](https://huggingface.co/datasets/Azure99/blossom-v6.1-sft-stage2) | 50K    |
 
 ## 模型评测
 
