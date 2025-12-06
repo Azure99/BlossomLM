@@ -5,11 +5,13 @@
 <p>
 
 
+
 <p align="center">
     🖥️<a
         href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
         href="https://huggingface.co/Azure99">Hugging Face</a>&nbsp|&nbsp📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>
 </p>
+
 
 
 Blossom是一个开源的对话式大型语言模型，提供可复现的后训练数据，致力于为每个人提供开放、强大且高效的本地通用模型。
@@ -20,22 +22,22 @@ Blossom模型的所有训练数据均由[BlossomData](https://github.com/Azure99
 
 ## 模型权重
 
-| 模型                                                         | 相关资源                                                     | 预训练模型        |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------- |
-| [Blossom-V6.2-36B](https://huggingface.co/Azure99/Blossom-V6.2-36B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.2-36B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.2-36B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.2:36b) | Seed-OSS-36B-Base |
-| [Blossom-V6.2-32B](https://huggingface.co/Azure99/Blossom-V6.2-32B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.2-32B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.2-32B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.2:32b) | Qwen2.5-32B       |
-| [Blossom-V6.2-14B](https://huggingface.co/Azure99/Blossom-V6.2-14B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.2-14B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.2-14B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.2:14b) | Qwen3-14B-Base    |
-| [Blossom-V6.2-8B](https://huggingface.co/Azure99/Blossom-V6.2-8B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.2-8B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.2-8B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.2:8b) | Qwen3-8B-Base     |
+Blossom-V6.3系列改善了V6.2中的重复输出问题，新增30B-A3B的MoE版本，同时提升了8B模型的综合能力。
 
-注：Blossom-V6.2-36B在绝大多数中/英文任务上效果比Blossom-V6.2-32B更优。
+| 模型                                                         | 相关资源                                                     | 预训练模型         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
+| [Blossom-V6.3-36B](https://huggingface.co/Azure99/Blossom-V6.3-36B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-36B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-36B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:36b) | Seed-OSS-36B-Base  |
+| [Blossom-V6.3-30B-A3B](https://huggingface.co/Azure99/Blossom-V6.3-30B-A3B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-30B-A3B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-30B-A3B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:30b) | Qwen3-30B-A3B-Base |
+| [Blossom-V6.3-14B](https://huggingface.co/Azure99/Blossom-V6.3-14B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-14B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-14B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:14b) | Qwen3-14B-Base     |
+| [Blossom-V6.3-8B](https://huggingface.co/Azure99/Blossom-V6.3-8B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-8B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-8B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:8b) | Qwen3-8B-Base      |
 
 ## 模型部署
 
 ### Ollama
 
-安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v6.2)查看全部可用模型(8b~32b)。
+安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v6.3)查看全部可用模型(8b~36b)。
 
-> ollama run azure99/blossom-v6.2
+> ollama run azure99/blossom-v6.3
 
 #### Android端使用Ollama
 
@@ -49,10 +51,10 @@ pkg install ollama
 
 ```bash
 nohup ollama serve &
-ollama run azure99/blossom-v6.2:8b
+ollama run azure99/blossom-v6.3:8b
 ```
 
-此外，推荐使用[PocketPal](https://github.com/a-ghorbani/pocketpal-ai)来在移动端体验Blossom模型，安装后，在Models页面选择Add from Hugging Face，并搜索Blossom-V6.2即可，建议选择8b-q4_k_m来平衡速度与质量。
+此外，推荐使用[PocketPal](https://github.com/a-ghorbani/pocketpal-ai)来在移动端体验Blossom模型，安装后，在Models页面选择Add from Hugging Face，并搜索Blossom-V6.3即可，建议选择8b-q4_k_m来平衡速度与质量。
 
 ### Transformers
 
@@ -73,8 +75,8 @@ python web_demo.py
 
 | 数据集                                                       | 数据量 |
 | ------------------------------------------------------------ | ------ |
-| [blossom-v6.2-sft-stage1](https://huggingface.co/datasets/Azure99/blossom-v6.2-sft-stage1) | 150K   |
-| [blossom-v6.2-sft-stage2](https://huggingface.co/datasets/Azure99/blossom-v6.2-sft-stage2) | 50K    |
+| [blossom-v6.3-sft-stage1](https://huggingface.co/datasets/Azure99/blossom-v6.3-sft-stage1) | 150K   |
+| [blossom-v6.3-sft-stage2](https://huggingface.co/datasets/Azure99/blossom-v6.3-sft-stage2) | 50K    |
 
 ## 模型评测
 
@@ -84,21 +86,21 @@ python web_demo.py
 
 Hard Prompt, Style Control, and GPT-4.1 as Judge.
 
-Blossom-V6.2系列模型在同尺寸，甚至更大尺寸的非推理模型中，表现出极强的竞争力，特别适合本地部署场景。
+Blossom-V6.3系列模型在同尺寸，甚至更大尺寸的非推理模型中，表现出极强的竞争力，特别适合本地部署场景。
 
 ```
                                 Model  Scores (%)        CI (%)
 0       Qwen3-235B-A22B-Instruct-2507        64.2  (-2.3 / +2.4)
 1                GLM-4.6-Non-Thinking        60.5  (-1.5 / +1.6)
-2                    Blossom-V6.2-36B        60.3  (-1.8 / +1.7)
+2                    Blossom-V6.3-36B        60.1  (-1.6 / +1.5)
 3         Qwen3-30B-A3B-Instruct-2507        57.3  (-1.8 / +1.8)
 4                        Kimi-K2-0905        55.6  (-1.6 / +1.6)
 5      DeepSeek-V3.2-Exp-Non-Thinking        53.8  (-1.7 / +1.9)
 6                  o3-mini-2025-01-31        50.0  (-0.0 / +0.0)
-7                    Blossom-V6.2-14B        46.6  (-2.1 / +1.8)
+7                    Blossom-V6.3-14B        47.8  (-1.9 / +1.6)
 8            GLM-4.5-Air-Non-Thinking        41.4  (-1.7 / +1.6)
 9                 ERNIE-4.5-300B-A47B        33.7  (-1.7 / +1.9)
-10                    Blossom-V6.2-8B        31.8  (-1.6 / +1.8)
+10                    Blossom-V6.3-8B        33.4  (-1.7 / +1.6)
 11 Seed-OSS-36B-Instruct-Non-Thinking        28.0  (-1.6 / +2.0)
 12             Qwen3-32B-Non-Thinking        26.5  (-1.8 / +1.6)
 13             Qwen3-14B-Non-Thinking        19.1  (-1.3 / +1.5)
