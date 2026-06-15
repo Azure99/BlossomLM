@@ -5,13 +5,11 @@
 <p>
 
 
-
 <p align="center">
     🖥️<a
         href="https://blossom-chat.com/">Demo</a>&nbsp|&nbsp🤗<a
         href="https://huggingface.co/Azure99">Hugging Face</a>&nbsp|&nbsp📑<a href="https://www.rainng.com/blossom-llm/">Blog</a>
 </p>
-
 
 
 Blossom是一个开源的对话式大型语言模型，提供可复现的后训练数据，致力于为每个人提供开放、强大且高效的本地通用模型。
@@ -22,22 +20,21 @@ Blossom模型的所有训练数据均由[BlossomData](https://github.com/Azure99
 
 ## 模型权重
 
-Blossom-V6.3系列改善了V6.2中的重复输出问题，新增30B-A3B的MoE版本，同时提升了8B模型的综合能力。
+Blossom-V6.4基本沿用了V6.3版本的训练方案和数据，将基座模型替换为Qwen3.5系列，并加入少量多模态样本，以维持基础模型的多模态能力。
 
-| 模型                                                         | 相关资源                                                     | 预训练模型         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------ |
-| [Blossom-V6.3-36B](https://huggingface.co/Azure99/Blossom-V6.3-36B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-36B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-36B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:36b) | Seed-OSS-36B-Base  |
-| [Blossom-V6.3-30B-A3B](https://huggingface.co/Azure99/Blossom-V6.3-30B-A3B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-30B-A3B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-30B-A3B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:30b) | Qwen3-30B-A3B-Base |
-| [Blossom-V6.3-14B](https://huggingface.co/Azure99/Blossom-V6.3-14B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-14B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-14B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:14b) | Qwen3-14B-Base     |
-| [Blossom-V6.3-8B](https://huggingface.co/Azure99/Blossom-V6.3-8B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.3-8B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.3-8B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.3:8b) | Qwen3-8B-Base      |
+| 模型                                                         | 相关资源                                                     | 预训练模型           |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | -------------------- |
+| [Blossom-V6.4-27B](https://huggingface.co/Azure99/Blossom-V6.4-27B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.4-27B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.4-27B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.4:27b) | Qwen3.5-27B          |
+| [Blossom-V6.4-35B-A3B](https://huggingface.co/Azure99/Blossom-V6.4-35B-A3B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.4-35B-A3B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.4-35B-A3B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.4:35b) | Qwen3.5-35B-A3B-Base |
+| [Blossom-V6.4-9B](https://huggingface.co/Azure99/Blossom-V6.4-9B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-V6.4-9B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V6.4-9B-GGUF) [Ollama](https://ollama.com/azure99/blossom-v6.4:9b) | Qwen3.5-9B-Base      |
 
 ## 模型部署
 
 ### Ollama
 
-安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v6.3)查看全部可用模型(8b~36b)。
+安装[Ollama](https://ollama.com/)后即可一键启动，你可以打开[模型列表](https://ollama.com/azure99/blossom-v6.4)查看全部可用模型。
 
-> ollama run azure99/blossom-v6.3
+> ollama run azure99/blossom-v6.4
 
 #### Android端使用Ollama
 
@@ -51,10 +48,10 @@ pkg install ollama
 
 ```bash
 nohup ollama serve &
-ollama run azure99/blossom-v6.3:8b
+ollama run azure99/blossom-v6.4:9b
 ```
 
-此外，推荐使用[PocketPal](https://github.com/a-ghorbani/pocketpal-ai)来在移动端体验Blossom模型，安装后，在Models页面选择Add from Hugging Face，并搜索Blossom-V6.3即可，建议选择8b-q4_k_m来平衡速度与质量。
+此外，推荐使用[PocketPal](https://github.com/a-ghorbani/pocketpal-ai)来在移动端体验Blossom模型，安装后，在Models页面选择Add from Hugging Face，并搜索Blossom-V6.4即可，建议选择9b-q4_k_m来平衡速度与质量。
 
 ### Transformers
 
