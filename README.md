@@ -14,25 +14,25 @@
     <a href="https://www.rainng.com/blossom-llm/">Blog</a>
 </p>
 
-Blossom-V7 is a family of open-weight, general-purpose multimodal models designed for local deployment. It combines efficient adaptive thinking, tool use with interleaved thinking, and image understanding. It covers everyday conversation, world knowledge, mathematics and reasoning, coding, web development, and data visualization, and supports agentic workflows through tool use.
+Blossom-V7.1 is a family of open-weight, general-purpose multimodal models designed for local deployment. It combines efficient thinking with two modes (`medium` and `max`), tool use with interleaved thinking, and image understanding. It covers everyday conversation, world knowledge, mathematics and reasoning, coding, web development, and data visualization, and supports agentic workflows through tool use.
 
 ## Key Features
 
-- **Efficient Adaptive Thinking:** Uses always-on adaptive thinking to scale reasoning depth to task difficulty, delivering high-quality results with reasoning traces about one-quarter as long as those of Qwen3.5 and one-fifth as long as those of Qwen3.6.
+- **Efficient Two-Mode Thinking:** Supports always-on `medium` and `max` thinking, defaulting to `max` for more thorough reasoning. The `medium` mode scales reasoning depth to task difficulty, delivering high-quality results with reasoning traces about one-quarter as long as those of Qwen3.5 and one-fifth as long as those of Qwen3.6.
 - **Tool Use with Interleaved Thinking:** Reasons and makes decisions before every tool call, enabling strong performance in agentic tasks.
 - **Image Understanding:** Understands image inputs alongside text.
 - **Long Context:** Handles up to 262,144 tokens (256K); use 131,072 tokens (128K) for best results.
 - **Faster Inference with MTP:** Supports speculative decoding via Multi-Token Prediction (MTP) in both vLLM and llama.cpp.
 
-> **Important:** Blossom-V7 uses a custom chat template that differs from Qwen3.5's native template. Always use the bundled `chat_template`; do not replace it with a Qwen3.5 chat template or combine the two templates.
+> **Important:** Blossom-V7.1 uses a custom chat template that differs from the native templates of its Qwen base models. Always use the bundled `chat_template`; do not replace it with a native Qwen chat template or combine the two templates.
 
 ## Model Variants
 
 | Model | Resources | Base Model |
 | --- | --- | --- |
-| [Blossom-V7-27B](https://huggingface.co/Azure99/Blossom-V7-27B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-27B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V7-27B-GGUF) | [Qwen3.5-27B](https://huggingface.co/Qwen/Qwen3.5-27B) |
-| [Blossom-V7-35B-A3B](https://huggingface.co/Azure99/Blossom-V7-35B-A3B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-35B-A3B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V7-35B-A3B-GGUF) | [Qwen3.5-35B-A3B](https://huggingface.co/Qwen/Qwen3.5-35B-A3B) |
-| [Blossom-V7-9B](https://huggingface.co/Azure99/Blossom-V7-9B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-9B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V7-9B-GGUF) | [Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B) |
+| [Blossom-V7.1-27B](https://huggingface.co/Azure99/Blossom-V7.1-27B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-27B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V7.1-27B-GGUF) | [Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) |
+| [Blossom-V7.1-35B-A3B](https://huggingface.co/Azure99/Blossom-V7.1-35B-A3B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-35B-A3B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V7.1-35B-A3B-GGUF) | [Qwen3.6-35B-A3B](https://huggingface.co/Qwen/Qwen3.6-35B-A3B) |
+| [Blossom-V7.1-9B](https://huggingface.co/Azure99/Blossom-V7.1-9B) | [Demo](https://huggingface.co/spaces/Azure99/Blossom-9B-Demo) [GGUF](https://huggingface.co/Azure99/Blossom-V7.1-9B-GGUF) | [Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B) |
 
 Select a variant based on your quality target, inference hardware, and memory budget:
 
@@ -42,7 +42,7 @@ Select a variant based on your quality target, inference hardware, and memory bu
 
 ## Post-Training
 
-Blossom-V7 is post-trained for general assistant use across everyday conversation, world knowledge, mathematics and reasoning, coding, web development, and data visualization.
+Blossom-V7.1 is post-trained for general assistant use across everyday conversation, world knowledge, mathematics and reasoning, coding, web development, and data visualization.
 
 The data pipeline uses [BlossomData](https://github.com/Azure99/BlossomData), our open-source framework for flexible, scalable data processing and synthesis. Data is filtered with LLM-as-Judge review and, when applicable, Agent-as-Judge verification. Agent-as-Judge runs in [AgentBox](https://github.com/Azure99/agentbox), our open-source work environment for AI agents, and uses search, browser interaction, screenshot capture, and code execution as needed. Samples involving web development and data visualization receive additional screening for functionality, usability, and visual quality.
 
@@ -57,18 +57,28 @@ After initializing the OpenAI-compatible `client` shown in either server example
 ```python
 messages = [{"role": "user", "content": "Explain why the sky is blue."}]
 
-response = client.chat.completions.create(model="blossom-v7", messages=messages)
+response = client.chat.completions.create(model="blossom-v7.1", messages=messages)
 messages.append(response.choices[0].message.model_dump(exclude_none=True))
 messages.append({"role": "user", "content": "Now explain it with an analogy."})
 
-response = client.chat.completions.create(model="blossom-v7", messages=messages)
+response = client.chat.completions.create(model="blossom-v7.1", messages=messages)
 ```
 
 This preserves vLLM's `reasoning` field, llama.cpp's `reasoning_content` field, and any tool calls. Configure agent frameworks to retain the complete assistant message in history.
 
 ## Usage
 
-The examples below use Blossom-V7-27B. To switch variants, set `MODEL_ID` to the corresponding Safetensors repository for Transformers or vLLM, or to the GGUF repository for llama.cpp.
+The examples below use Blossom-V7.1-27B. To switch variants, set `MODEL_ID` to the corresponding Safetensors repository for Transformers or vLLM, or to the GGUF repository for llama.cpp.
+
+### Thinking Modes
+
+Thinking is always on, with two modes: `medium` and `max`. The default is `max`. The bundled chat template maps `reasoning_effort` values to these modes as follows:
+
+| `reasoning_effort` | Thinking Mode |
+| --- | --- |
+| Omitted (default) | `max` |
+| `low`, `medium`, `adaptive` (template alias) | `medium` |
+| All other values | `max` |
 
 ### Recommended Sampling
 
@@ -88,7 +98,7 @@ This text-only path skips the vision encoder:
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-MODEL_ID = "Azure99/Blossom-V7-27B"
+MODEL_ID = "Azure99/Blossom-V7.1-27B"
 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
 model = AutoModelForCausalLM.from_pretrained(
@@ -130,10 +140,10 @@ pip install -U "vllm>=0.26.0" openai
 Start an OpenAI-compatible server:
 
 ```bash
-MODEL_ID=Azure99/Blossom-V7-27B
+MODEL_ID=Azure99/Blossom-V7.1-27B
 
 vllm serve "$MODEL_ID" \
-  --served-model-name blossom-v7 \
+  --served-model-name blossom-v7.1 \
   --max-model-len 131072 \
   --gpu-memory-utilization 0.95 \
   --reasoning-parser qwen3 \
@@ -154,7 +164,7 @@ client = OpenAI(base_url="http://localhost:8000/v1", api_key="EMPTY")
 IMAGE_URL = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/pipeline-cat-chonk.jpeg"
 
 response = client.chat.completions.create(
-    model="blossom-v7",
+    model="blossom-v7.1",
     messages=[
         {
             "role": "user",
@@ -175,6 +185,8 @@ print("Reasoning:", getattr(message, "reasoning", None))
 print("Answer:", message.content)
 ```
 
+To select `medium` mode with vLLM, add `reasoning_effort="medium"` to the `client.chat.completions.create(...)` call above.
+
 ### llama.cpp (GGUF)
 
 For GGUF inference, use the matching GGUF repository with a current `llama.cpp` build. Use the embedded chat template; do not pass `--chat-template` or `--chat-template-file`. Keep `--reasoning on` and `--reasoning-format deepseek` enabled as shown below.
@@ -182,14 +194,13 @@ For GGUF inference, use the matching GGUF repository with a current `llama.cpp` 
 Ollama is not recommended because its current chat implementation does not correctly preserve Blossom's template behavior.
 
 ```bash
-MODEL_ID=Azure99/Blossom-V7-27B-GGUF
+MODEL_ID=Azure99/Blossom-V7.1-27B-GGUF
 
 llama-server \
   -hf "${MODEL_ID}:Q4_K_M" \
-  --alias blossom-v7 \
+  --alias blossom-v7.1 \
   --ctx-size 131072 \
   --parallel 1 \
-  --n-gpu-layers all \
   --flash-attn on \
   --spec-type draft-mtp \
   --spec-draft-n-max 1 \
@@ -209,7 +220,7 @@ from openai import OpenAI
 
 client = OpenAI(base_url="http://localhost:8080/v1", api_key="no-key")
 response = client.chat.completions.create(
-    model="blossom-v7",
+    model="blossom-v7.1",
     messages=[{"role": "user", "content": "Find an elegant proof that there are infinitely many primes."}],
     max_tokens=2048,
 )
@@ -230,4 +241,4 @@ The latest currently available Blossom post-training datasets are from V6.3:
 
 ## License
 
-Blossom-V7 is released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+Blossom-V7.1 is released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
